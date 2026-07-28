@@ -1,0 +1,8 @@
+# Python Dependencies for AeroAnalytics Dashboard
+# Note: The web server runs entirely on Python Standard Library.
+# These packages are optional and are mainly used for notebook analytical explorations.
+
+pandas>=2.0.0
+matplotlib>=3.7.0
+ipykernel>=6.0.0
+jupyter>=1.0.0

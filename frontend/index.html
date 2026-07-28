@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroAnalytics | Data Analytics Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-chart-line-up logo-icon"></i>
+                <h2>Aero<span>Analytics</span></h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active" data-tab="overview">
+                        <i class="fa-solid fa-grip"></i>
+                        <span>Overview Dashboard</span>
+                    </li>
+                    <li class="nav-item" data-tab="sql-sandbox">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>SQL Playground</span>
+                    </li>
+                    <li class="nav-item" data-tab="bi-integration">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        <span>BI Tool Setup</span>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Connection Status -->
+            <div class="sidebar-footer">
+                <div class="status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span>Connected to: <strong>dashboard.db</strong></span>
+                </div>
+                <button class="reset-db-btn" id="resetDbBtn" title="Reset database from CSV files">
+                    <i class="fa-solid fa-rotate-left"></i> Reset Database
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Viewport -->
+        <main class="main-content">
+            <!-- Connection Alert Banner -->
+            <div id="connectionAlert" class="connection-alert" style="display: none;">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span><strong>Connection Error:</strong> Cannot connect to the API server. Please run <code>python3 backend/server.py</code> in your project folder.</span>
+            </div>
+
+            <!-- Top Navbar -->
+            <header class="top-nav">
+                <div class="nav-search">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search parameters or templates...">
+                </div>
+                <div class="profile-actions">
+                    <button class="theme-toggle-btn" id="themeToggle" title="Toggle theme mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <div class="user-profile">
+                        <div class="avatar">DA</div>
+                        <div class="profile-info">
+                            <h4>Data Analyst</h4>
+                            <span>Administrator</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Workspace Tabs Content -->
+            <div class="tab-content active" id="tab-overview">
+                <!-- KPI Section -->
+                <section class="kpi-grid">
+                    <div class="kpi-card" id="kpi-sales">
+                        <div class="kpi-header">
+                            <span>TOTAL REVENUE</span>
+                            <i class="fa-solid fa-dollar-sign icon-revenue"></i>
+                        </div>
+                        <div class="kpi-value">$0.00</div>
+                        <div class="kpi-trend positive">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+12.4% vs last period</span>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-card" id="kpi-profit">
+                        <div class="kpi-header">
+                            <span>NET PROFIT</span>
+                            <i class="fa-solid fa-wallet icon-profit"></i>
+                        </div>
+                        <div class="kpi-value">$0.00</div>
+                        <div class="kpi-trend positive">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+8.2% vs last period</span>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-card" id="kpi-margin">
+                        <div class="kpi-header">
+                            <span>PROFIT MARGIN</span>
+                            <i class="fa-solid fa-percent icon-margin"></i>
+                        </div>
+                        <div class="kpi-value">0.0%</div>
+                        <div class="kpi-trend positive">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+2.1% margin expansion</span>
+                        </div>
+                    </div>
+                    
+                    <div class="kpi-card" id="kpi-customers">
+                        <div class="kpi-header">
+                            <span>TOTAL ACCOUNTS</span>
+                            <i class="fa-solid fa-users icon-accounts"></i>
+                        </div>
+                        <div class="kpi-value">0</div>
+                        <div class="kpi-trend positive">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <span>+15.3% growth</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analytics Charts -->
+                <section class="charts-layout">
+                    <div class="chart-container main-chart-wrapper">
+                        <div class="chart-header">
+                            <h3>Revenue & Profit Performance Trend</h3>
+                            <div class="chart-controls">
+                                <span class="chart-legend-dot revenue"></span> Revenue
+                                <span class="chart-legend-dot profit"></span> Profit
+                            </div>
+                        </div>
+                        <div class="chart-canvas-container">
+                            <canvas id="revenueTrendChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="secondary-charts-grid">
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Product Revenue Distribution</h3>
+                            </div>
+                            <div class="chart-canvas-container">
+                                <canvas id="productCategoryChart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Regional Account Share</h3>
+                            </div>
+                            <div class="chart-canvas-container">
+                                <canvas id="regionalSalesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Insights and Predefined Queries Section -->
+                <section class="insights-layout">
+                    <!-- Business Insights Drawer -->
+                    <div class="insights-container">
+                        <div class="insights-header">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <h3>Dynamic AI Business Insights</h3>
+                        </div>
+                        <div class="insights-list" id="insightsList">
+                            <!-- Populated by JavaScript -->
+                            <div class="insight-placeholder">Analyzing database patterns...</div>
+                        </div>
+                    </div>
+
+                    <!-- Shortcut Queries -->
+                    <div class="queries-container">
+                        <div class="queries-header">
+                            <i class="fa-solid fa-bolt"></i>
+                            <h3>Quick Report Queries</h3>
+                        </div>
+                        <p class="queries-subtitle">Click to load and execute pre-formatted SQL analytics:</p>
+                        <div class="quick-queries-grid" id="quickQueriesGrid">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SQL Sandbox Tab -->
+            <div class="tab-content" id="tab-sql-sandbox">
+                <div class="sandbox-layout">
+                    <!-- SQL Workspace -->
+                    <div class="sandbox-main">
+                        <div class="editor-header">
+                            <div class="editor-title">
+                                <i class="fa-solid fa-database"></i>
+                                <span>Interactive SQL Console</span>
+                            </div>
+                            <div class="editor-actions">
+                                <button class="run-query-btn" id="runQueryBtn">
+                                    <i class="fa-solid fa-play"></i> Run Query (CMD+Enter)
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="sql-editor-container">
+                            <textarea id="sqlQueryTextarea" spellcheck="false" placeholder="-- Write your SQLite query here...&#10;SELECT * FROM sales LIMIT 10;"></textarea>
+                        </div>
+
+                        <!-- Query Metadata / Alert Bar -->
+                        <div class="query-status-bar" id="queryStatusBar">
+                            <span id="queryStatusText"><i class="fa-solid fa-info-circle"></i> Ready to execute.</span>
+                            <span id="queryExecutionTime" class="exec-time"></span>
+                        </div>
+
+                        <!-- Dynamic Visualizations of Query Output -->
+                        <div class="sandbox-chart-container" id="sandboxChartContainer" style="display: none;">
+                            <div class="chart-header">
+                                <div class="visualizer-badge"><i class="fa-solid fa-chart-column"></i> SQL Output Visualization</div>
+                                <select id="sandboxChartTypeSelect">
+                                    <option value="bar">Bar Chart</option>
+                                    <option value="line">Line Chart</option>
+                                    <option value="pie">Pie Chart</option>
+                                </select>
+                            </div>
+                            <div class="chart-canvas-container" style="height: 250px;">
+                                <canvas id="sandboxChart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Query Results Table -->
+                        <div class="results-table-container">
+                            <div class="results-header">
+                                <h3>Query Execution Results</h3>
+                                <span class="row-count-badge" id="rowCountBadge" style="display: none;">0 rows</span>
+                            </div>
+                            <div class="table-wrapper" id="tableWrapper">
+                                <div class="table-placeholder">
+                                    <i class="fa-solid fa-table-list"></i>
+                                    <p>Execute an SQL query to view output data rows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database Schema Details -->
+                    <aside class="schema-sidebar">
+                        <div class="schema-header">
+                            <i class="fa-solid fa-sitemap"></i>
+                            <h3>Database Catalog</h3>
+                        </div>
+                        <div class="schema-explorer" id="schemaExplorer">
+                            <div class="explorer-placeholder">Loading schema definitions...</div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <!-- BI Tool Setup Tab -->
+            <div class="tab-content" id="tab-bi-integration">
+                <div class="bi-guide-container">
+                    <div class="bi-header-section">
+                        <h1>Connecting to Power BI & Tableau</h1>
+                        <p class="subtitle">Import this database into your favorite analytics suites to build dashboards</p>
+                    </div>
+
+                    <!-- Live Embedded Tableau Visualization -->
+                    <div class="tableau-embed-card">
+                        <div class="tableau-header">
+                            <div class="tableau-badge">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                <span>Live Tableau Dashboard Showcase</span>
+                            </div>
+                            <span class="tableau-status"><span class="pulse-dot"></span> Interactive Viz</span>
+                        </div>
+                        <div class="tableau-frame-wrapper" id="tableauContainer">
+                            <div class="tableau-placeholder-load">
+                                <i class="fa-solid fa-circle-notch fa-spin"></i>
+                                <span>Lazy-loading Tableau Analytics workspace...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bi-cards-grid">
+                        <div class="bi-tool-card pb-card">
+                            <div class="tool-logo">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <h2>Power BI Desktop</h2>
+                            </div>
+                            <ol class="step-list">
+                                <li>Open Power BI Desktop.</li>
+                                <li>Click on <strong>Get Data</strong> → <strong>More...</strong>.</li>
+                                <li>Search for <strong>ODBC</strong> and select it.</li>
+                                <li>Under Connection string, enter: <br>
+                                    <code>Driver={SQLite3 ODBC Driver};Database=[Path_To_Project]/data/dashboard.db;</code>
+                                </li>
+                                <li>Alternatively, install the official SQLite ODBC driver, create a System DSN pointing to the database, and connect using DSN.</li>
+                                <li>In the Navigator window, select the <code>sales</code> and <code>customers</code> tables to load them into the Power Query Editor.</li>
+                            </ol>
+                        </div>
+
+                        <div class="bi-tool-card tab-card">
+                            <div class="tool-logo">
+                                <i class="fa-solid fa-map"></i>
+                                <h2>Tableau Desktop</h2>
+                            </div>
+                            <ol class="step-list">
+                                <li>Open Tableau Desktop.</li>
+                                <li>Under <strong>To a Server</strong>, select <strong>Other Databases (ODBC)</strong>.</li>
+                                <li>Select <strong>Driver</strong> and choose <strong>SQLite3 ODBC Driver</strong>.</li>
+                                <li>Click <strong>Connect</strong>, select the database file at:<br>
+                                    <code>[Path_To_Project]/data/dashboard.db</code>
+                                </li>
+                                <li>Click OK and Sign In.</li>
+                                <li>Drag and drop the tables into the Join Canvas and configure: <br>
+                                    <code>sales.customer_id = customers.customer_id</code> (Inner/Left Join).
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Connection Tips -->
+                    <div class="bi-tips-card">
+                        <h3><i class="fa-solid fa-lightbulb"></i> Pro-Tips for BI Modelling</h3>
+                        <div class="tips-grid">
+                            <div class="tip-item">
+                                <h4>Star Schema Setup</h4>
+                                <p>Set up a Star Schema relationship inside the BI Model view: <code>sales</code> acts as the Fact Table (containing metrics like quantity, profit, amount), and <code>customers</code> acts as the Dimension Table.</p>
+                            </div>
+                            <div class="tip-item">
+                                <h4>Export raw SQL scripts</h4>
+                                <p>If you prefer to load data into cloud warehouses or other engines like PostgreSQL/MySQL, you can copy the schema layout structures directly from the SQL Console catalog sidebar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+customer_id,first_name,last_name,email,region,signup_date,segment
+CUST001,Emily,Smith,emily.smith1@example.com,Asia-Pacific,2024-05-22,Mid-Market
+CUST002,Emily,Moore,emily.moore2@example.com,North America,2024-02-02,SMB
+CUST003,John,Williams,john.williams3@example.com,Europe,2025-09-08,Mid-Market
+CUST004,John,Moore,john.moore4@example.com,Europe,2025-12-19,SMB
+CUST005,Carol,Wilson,carol.wilson5@example.com,Europe,2024-10-11,Mid-Market
+CUST006,John,Garcia,john.garcia6@example.com,Latin America,2024-06-08,Mid-Market
+CUST007,James,Hernandez,james.hernandez7@example.com,North America,2024-04-09,Enterprise
+CUST008,Lisa,Lopez,lisa.lopez8@example.com,Asia-Pacific,2025-04-15,SMB
+CUST009,Carol,Brown,carol.brown9@example.com,Latin America,2024-10-27,Enterprise
+CUST010,Ruth,Lopez,ruth.lopez10@example.com,Europe,2024-02-16,SMB
+CUST011,Jessica,Martinez,jessica.martinez11@example.com,North America,2024-04-13,SMB
+CUST012,Joseph,Rodriguez,joseph.rodriguez12@example.com,Latin America,2025-01-08,SMB
+CUST013,Sarah,Lopez,sarah.lopez13@example.com,Asia-Pacific,2024-09-30,Mid-Market
+CUST014,Michael,Martin,michael.martin14@example.com,Europe,2024-09-07,SMB
+CUST015,Sarah,Anderson,sarah.anderson15@example.com,Latin America,2025-10-17,Mid-Market
+CUST016,Carol,Davis,carol.davis16@example.com,Asia-Pacific,2024-02-27,SMB
+CUST017,Jessica,Johnson,jessica.johnson17@example.com,Asia-Pacific,2024-03-08,Mid-Market
+CUST018,James,Jackson,james.jackson18@example.com,Asia-Pacific,2025-05-26,Mid-Market
+CUST019,Joseph,Anderson,joseph.anderson19@example.com,Europe,2024-09-09,Mid-Market
+CUST020,Carol,Moore,carol.moore20@example.com,Asia-Pacific,2025-03-14,SMB
+CUST021,Daniel,Gonzalez,daniel.gonzalez21@example.com,Asia-Pacific,2024-05-21,Mid-Market
+CUST022,Charles,Thomas,charles.thomas22@example.com,North America,2024-04-22,SMB
+CUST023,David,Garcia,david.garcia23@example.com,Latin America,2025-01-29,SMB
+CUST024,Joseph,Martin,joseph.martin24@example.com,Latin America,2025-07-20,SMB
+CUST025,John,Brown,john.brown25@example.com,Asia-Pacific,2024-12-14,SMB
+CUST026,Emily,Martinez,emily.martinez26@example.com,Latin America,2024-01-04,Enterprise
+CUST027,Robert,Taylor,robert.taylor27@example.com,Europe,2024-04-18,SMB
+CUST028,Karen,Taylor,karen.taylor28@example.com,Europe,2024-06-14,Enterprise
+CUST029,Carol,Taylor,carol.taylor29@example.com,North America,2025-05-15,SMB
+CUST030,John,Brown,john.brown30@example.com,Asia-Pacific,2024-11-10,SMB
+CUST031,Jessica,Johnson,jessica.johnson31@example.com,Europe,2024-03-21,SMB
+CUST032,Michael,Thomas,michael.thomas32@example.com,North America,2025-06-29,SMB
+CUST033,David,Jones,david.jones33@example.com,Latin America,2024-06-18,SMB
+CUST034,Robert,Taylor,robert.taylor34@example.com,Latin America,2025-07-06,SMB
+CUST035,James,Martinez,james.martinez35@example.com,Latin America,2025-10-27,SMB
+CUST036,Lisa,Anderson,lisa.anderson36@example.com,Latin America,2024-08-18,Enterprise
+CUST037,Michael,Hernandez,michael.hernandez37@example.com,North America,2024-08-23,SMB
+CUST038,Daniel,Davis,daniel.davis38@example.com,North America,2025-10-08,Enterprise
+CUST039,Jane,Davis,jane.davis39@example.com,North America,2024-12-04,SMB
+CUST040,Michael,Taylor,michael.taylor40@example.com,Europe,2025-05-12,Mid-Market
+CUST041,James,Moore,james.moore41@example.com,Europe,2025-08-07,SMB
+CUST042,Daniel,Thomas,daniel.thomas42@example.com,Europe,2025-02-20,SMB
+CUST043,James,Brown,james.brown43@example.com,North America,2024-12-28,SMB
+CUST044,Sandra,Wilson,sandra.wilson44@example.com,Latin America,2024-02-25,SMB
+CUST045,Emily,Johnson,emily.johnson45@example.com,Latin America,2024-04-21,SMB
+CUST046,Jessica,Miller,jessica.miller46@example.com,Europe,2024-05-23,SMB
+CUST047,Sandra,Garcia,sandra.garcia47@example.com,Asia-Pacific,2024-03-18,Mid-Market
+CUST048,Thomas,Moore,thomas.moore48@example.com,North America,2025-07-07,Enterprise
+CUST049,John,Williams,john.williams49@example.com,Europe,2025-05-12,Enterprise
+CUST050,Donna,Miller,donna.miller50@example.com,Latin America,2024-06-17,SMB
+CUST051,Joseph,Smith,joseph.smith51@example.com,Latin America,2025-04-10,Mid-Market
+CUST052,Karen,Wilson,karen.wilson52@example.com,Latin America,2024-10-30,Enterprise
+CUST053,James,Johnson,james.johnson53@example.com,North America,2024-02-28,SMB
+CUST054,Jane,Jackson,jane.jackson54@example.com,Latin America,2025-06-27,SMB
+CUST055,Sarah,Johnson,sarah.johnson55@example.com,North America,2024-03-11,SMB
+CUST056,Ruth,Williams,ruth.williams56@example.com,Europe,2025-08-06,Mid-Market
+CUST057,Jessica,Jackson,jessica.jackson57@example.com,North America,2025-03-05,SMB
+CUST058,Daniel,Jackson,daniel.jackson58@example.com,Asia-Pacific,2024-07-28,SMB
+CUST059,William,Davis,william.davis59@example.com,Asia-Pacific,2025-11-18,Mid-Market
+CUST060,Karen,Anderson,karen.anderson60@example.com,Asia-Pacific,2024-03-15,SMB
+CUST061,John,Anderson,john.anderson61@example.com,North America,2024-08-06,Enterprise
+CUST062,Charles,Rodriguez,charles.rodriguez62@example.com,Europe,2024-03-11,SMB
+CUST063,Jessica,Lopez,jessica.lopez63@example.com,Asia-Pacific,2025-07-10,Enterprise
+CUST064,Karen,Martin,karen.martin64@example.com,North America,2025-07-21,SMB
+CUST065,Karen,Brown,karen.brown65@example.com,Europe,2024-04-19,Mid-Market
+CUST066,Carol,Jones,carol.jones66@example.com,Asia-Pacific,2024-08-03,Mid-Market
+CUST067,William,Miller,william.miller67@example.com,Asia-Pacific,2024-09-14,SMB
+CUST068,Jane,Williams,jane.williams68@example.com,Latin America,2024-02-15,SMB
+CUST069,John,Hernandez,john.hernandez69@example.com,Europe,2024-09-25,SMB
+CUST070,Sarah,Anderson,sarah.anderson70@example.com,Latin America,2024-04-24,SMB
+CUST071,Michael,Jones,michael.jones71@example.com,North America,2025-08-19,SMB
+CUST072,Carol,Jones,carol.jones72@example.com,Latin America,2024-11-11,Enterprise
+CUST073,Lisa,Johnson,lisa.johnson73@example.com,Asia-Pacific,2024-09-12,Mid-Market
+CUST074,Emily,Lopez,emily.lopez74@example.com,Latin America,2024-06-07,SMB
+CUST075,Jessica,Garcia,jessica.garcia75@example.com,Europe,2024-01-26,SMB
+CUST076,Sarah,Hernandez,sarah.hernandez76@example.com,Latin America,2024-09-11,SMB
+CUST077,Robert,Garcia,robert.garcia77@example.com,North America,2024-02-09,Mid-Market
+CUST078,Donna,Davis,donna.davis78@example.com,Europe,2025-04-16,SMB
+CUST079,Lisa,Martinez,lisa.martinez79@example.com,Europe,2025-11-06,Mid-Market
+CUST080,James,Gonzalez,james.gonzalez80@example.com,Asia-Pacific,2024-03-12,Mid-Market
+CUST081,Robert,Lopez,robert.lopez81@example.com,Latin America,2025-07-03,SMB
+CUST082,William,Smith,william.smith82@example.com,North America,2024-09-24,SMB
+CUST083,Sarah,Jackson,sarah.jackson83@example.com,Asia-Pacific,2025-09-02,Enterprise
+CUST084,Sandra,Lopez,sandra.lopez84@example.com,Asia-Pacific,2025-06-07,Mid-Market
+CUST085,Emily,Gonzalez,emily.gonzalez85@example.com,Europe,2025-12-26,Mid-Market
+CUST086,Sandra,Smith,sandra.smith86@example.com,Europe,2024-03-12,Mid-Market
+CUST087,William,Martin,william.martin87@example.com,Asia-Pacific,2024-05-07,SMB
+CUST088,Karen,Taylor,karen.taylor88@example.com,Asia-Pacific,2024-11-30,SMB
+CUST089,Joseph,Martinez,joseph.martinez89@example.com,Europe,2025-11-11,Enterprise
+CUST090,Joseph,Garcia,joseph.garcia90@example.com,Asia-Pacific,2024-01-01,Mid-Market
+CUST091,Karen,Martinez,karen.martinez91@example.com,Europe,2025-08-16,Mid-Market
+CUST092,Ruth,Hernandez,ruth.hernandez92@example.com,Latin America,2025-11-22,Mid-Market
+CUST093,James,Taylor,james.taylor93@example.com,Latin America,2024-06-22,SMB
+CUST094,Michael,Martinez,michael.martinez94@example.com,Asia-Pacific,2024-08-28,Enterprise
+CUST095,Karen,Davis,karen.davis95@example.com,Europe,2024-02-17,Enterprise
+CUST096,Jessica,Thomas,jessica.thomas96@example.com,North America,2025-10-06,Mid-Market
+CUST097,Daniel,Miller,daniel.miller97@example.com,Latin America,2024-09-06,Mid-Market
+CUST098,David,Smith,david.smith98@example.com,North America,2024-08-12,SMB
+CUST099,Sarah,Taylor,sarah.taylor99@example.com,Latin America,2024-09-12,Enterprise
+CUST100,Emily,Anderson,emily.anderson100@example.com,Europe,2025-11-14,SMB
+CUST101,Charles,Moore,charles.moore101@example.com,Asia-Pacific,2025-03-29,SMB
+CUST102,Ruth,Taylor,ruth.taylor102@example.com,Latin America,2025-07-15,SMB
+CUST103,Thomas,Garcia,thomas.garcia103@example.com,Latin America,2024-09-10,Mid-Market
+CUST104,Robert,Taylor,robert.taylor104@example.com,Latin America,2024-10-08,SMB
+CUST105,Thomas,Williams,thomas.williams105@example.com,Asia-Pacific,2024-12-09,Mid-Market
+CUST106,William,Moore,william.moore106@example.com,North America,2024-08-24,Enterprise
+CUST107,Joseph,Jones,joseph.jones107@example.com,Europe,2025-02-21,Enterprise
+CUST108,William,Moore,william.moore108@example.com,Latin America,2024-07-30,Mid-Market
+CUST109,Sandra,Gonzalez,sandra.gonzalez109@example.com,North America,2025-08-12,SMB
+CUST110,Joseph,Thomas,joseph.thomas110@example.com,North America,2024-11-01,SMB
+CUST111,Joseph,Wilson,joseph.wilson111@example.com,Europe,2024-10-06,Mid-Market
+CUST112,Sandra,Thomas,sandra.thomas112@example.com,North America,2025-11-15,Mid-Market
+CUST113,Joseph,Garcia,joseph.garcia113@example.com,Latin America,2025-09-29,SMB
+CUST114,Carol,Smith,carol.smith114@example.com,Latin America,2025-11-09,SMB
+CUST115,John,Williams,john.williams115@example.com,Latin America,2025-04-17,Enterprise
+CUST116,Sarah,Johnson,sarah.johnson116@example.com,Asia-Pacific,2024-08-04,Mid-Market
+CUST117,Thomas,Hernandez,thomas.hernandez117@example.com,Asia-Pacific,2025-01-23,SMB
+CUST118,Robert,Wilson,robert.wilson118@example.com,Asia-Pacific,2025-04-26,SMB
+CUST119,John,Moore,john.moore119@example.com,North America,2024-12-24,SMB
+CUST120,Jessica,Williams,jessica.williams120@example.com,North America,2024-09-10,SMB
+CUST121,James,Smith,james.smith121@example.com,Europe,2025-04-29,Mid-Market
+CUST122,Emily,Jackson,emily.jackson122@example.com,Europe,2024-09-19,Mid-Market
+CUST123,Lisa,Garcia,lisa.garcia123@example.com,North America,2024-06-16,SMB
+CUST124,Karen,Brown,karen.brown124@example.com,North America,2025-08-12,SMB
+CUST125,Joseph,Gonzalez,joseph.gonzalez125@example.com,Europe,2025-12-08,Enterprise
+CUST126,Jessica,Brown,jessica.brown126@example.com,Asia-Pacific,2025-09-06,SMB
+CUST127,Emily,Jackson,emily.jackson127@example.com,North America,2025-03-14,Mid-Market
+CUST128,Lisa,Williams,lisa.williams128@example.com,Asia-Pacific,2025-03-06,Enterprise
+CUST129,Donna,Brown,donna.brown129@example.com,Latin America,2025-10-12,SMB
+CUST130,Thomas,Jones,thomas.jones130@example.com,Latin America,2025-06-18,Enterprise
+CUST131,Robert,Martin,robert.martin131@example.com,Latin America,2025-08-29,Mid-Market
+CUST132,Robert,Hernandez,robert.hernandez132@example.com,Europe,2024-03-29,SMB
+CUST133,Robert,Anderson,robert.anderson133@example.com,Europe,2025-08-06,SMB
+CUST134,Ruth,Gonzalez,ruth.gonzalez134@example.com,Asia-Pacific,2024-11-28,Enterprise
+CUST135,Sarah,Thomas,sarah.thomas135@example.com,Europe,2024-09-21,Mid-Market
+CUST136,William,Rodriguez,william.rodriguez136@example.com,Asia-Pacific,2025-06-13,SMB
+CUST137,James,Williams,james.williams137@example.com,Europe,2025-05-15,SMB
+CUST138,Carol,Davis,carol.davis138@example.com,Latin America,2025-05-17,SMB
+CUST139,Thomas,Smith,thomas.smith139@example.com,North America,2025-02-18,Mid-Market
+CUST140,Jessica,Martinez,jessica.martinez140@example.com,Asia-Pacific,2025-06-27,Mid-Market
+CUST141,Lisa,Wilson,lisa.wilson141@example.com,Asia-Pacific,2025-04-09,Mid-Market
+CUST142,Robert,Martinez,robert.martinez142@example.com,Asia-Pacific,2024-07-16,Mid-Market
+CUST143,William,Brown,william.brown143@example.com,Europe,2025-05-10,Enterprise
+CUST144,Robert,Jackson,robert.jackson144@example.com,Asia-Pacific,2024-07-17,SMB
+CUST145,Karen,Davis,karen.davis145@example.com,Asia-Pacific,2024-01-15,Enterprise
+CUST146,Carol,Jones,carol.jones146@example.com,Asia-Pacific,2024-02-25,Enterprise
+CUST147,Carol,Martinez,carol.martinez147@example.com,Europe,2025-05-17,SMB
+CUST148,Emily,Smith,emily.smith148@example.com,Asia-Pacific,2025-03-27,Mid-Market
+CUST149,William,Garcia,william.garcia149@example.com,North America,2025-05-04,Mid-Market
+CUST150,Emily,Williams,emily.williams150@example.com,Latin America,2025-08-13,Mid-Market
