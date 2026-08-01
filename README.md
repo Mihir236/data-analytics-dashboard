@@ -4,26 +4,14 @@
 
 ---
 
-## 📖 Overview
-Dynamic web interface for visualizing business KPIs, customer events, and platform activity logs.
+## 📋 Project Specifications
 
----
-
-## 📊 Project Specifications
-
-### 1. Dataset Details
-* **Source**: Local dataset (`sales.csv`)
-* **Size**: 1,425 records
-
-### 2. Method & Approach
-* **Approach**: Single Page Application (SPA) dashboard communicating with a REST API for real-time chart rendering
-* **Metric/Result**: Maintains under 100ms API response time, handling up to 500 concurrent visualization updates
-
-### 3. Tech Stack & Tools
-* **Technologies**: JavaScript, Node.js, Express, Chart.js, CSS (Dependencies: pandas, matplotlib, ipykernel, jupyter)
-
-### ✨ Differentiating Features
-- **Features a sleek responsive glassmorphism UI with smooth CSS micro-animations**
+* **Overview**: "Dynamic web interface for visualizing business KPIs, customer events, and platform activity logs."
+* **Dataset**: "Local dataset (`sales.csv`), 1,425 records"
+* **Method**: "Single Page Application (SPA) dashboard communicating with a REST API for real-time chart rendering"
+* **Results**: "Maintains under 100ms API response time, handling up to 500 concurrent visualization updates"
+* **Tech stack**: "JavaScript, Node.js, Express, Chart.js, CSS (Dependencies: pandas, matplotlib, ipykernel, jupyter)"
+* **Unique feature**: "Features a sleek responsive glassmorphism UI with smooth CSS micro-animations"
 
 ---
 
